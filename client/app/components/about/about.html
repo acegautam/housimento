@@ -1,0 +1,12 @@
+<div class="about">
+  <h2>{{ vm.name }}</h2>
+  <md-divider></md-divider>
+  <p>
+    <i>UI Frontender, amateur photographer &amp; a green thumb hobbyist.</i><br /><br />
+  </p>
+  <p>Inside parent view --- {{vm.comment || "None"}}</p>
+  <p ng-if="vm.selectedFeature">Selected feature :: {{vm.selectedFeature.name}} ({{vm.selectedFeature.price|currency}})</p>
+  <md-divider></md-divider>
+
+  <info dtitle="vm.directiveTitle" message="vm.comment" features="vm.info" states="vm.states" selectedfeature="vm.selectedFeature" showmsg="vm.showMesssage(feature|currency)"></info>
+</div>

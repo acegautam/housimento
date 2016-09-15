@@ -1,0 +1,20 @@
+// @import "~bootstrap/less/bootstrap.less";
+@import "~angular-material/angular-material.css";
+@import './common/common';
+@component-base-url: "components";
+@common-base-url: "common";
+app {
+    #content {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 5px;
+    }
+}
+// Common styles
+@import "@{common-base-url}/header/header";
+@import "@{common-base-url}/navbar/navbar";
+@import "@{common-base-url}/hero/hero";
+@import "@{common-base-url}/footer/footer";
+// Component styles
+@import "@{component-base-url}/home/home";
+@import "@{component-base-url}/about/about";

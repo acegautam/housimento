@@ -1,0 +1,18 @@
+<h2>{{vm.dtitle}}</h2>
+<div>
+  <md-input-container>
+    <label>Comment</label>
+    <input type="text" ng-model="vm.message" required md-maxlength="50">
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+    <label>Select a feature</label>
+    <md-select ng-model="vm.selectedfeature" ng-change="vm.showmsg({feature: vm.selectedfeature.price})">
+      <md-option ng-repeat="feature in vm.features" ng-value="feature">
+        {{feature.name}}
+      </md-option>
+    </md-select>
+  </md-input-container>
+</div>
