@@ -1,5 +1,5 @@
 {
-  "name": "sentimento",
+  "name": "housimento",
   "version": "0.0.1",
   "description": "Web-based dashboard application for sentiment analysis",
   "main": "index.js",
@@ -69,7 +69,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/acegautam/sentimento.git"
+    "url": "https://github.com/acegautam/housimento.git"
   },
   "author": "Gautam M",
   "license": "Apache-2.0"
