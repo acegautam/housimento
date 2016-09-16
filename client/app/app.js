@@ -21,8 +21,8 @@ angular.module('app', [
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
 
-    // let theme = setDefaultTheme($mdThemingProvider);
-    let theme = setCustomTheme($mdThemingProvider);
+    let theme = setDefaultTheme($mdThemingProvider);
+    // let theme = setCustomTheme($mdThemingProvider);
     toggleDarkMode(theme, false);
 
   })
@@ -46,8 +46,8 @@ function setCustomTheme($mdThemingProvider) {
     .primaryPalette('customBlue', {
       'default': '500',
       'hue-1': '50'
-    })
-    .accentPalette('pink');
+    });
+    // .accentPalette('pink');
 }
 
 function toggleDarkMode(theme, isDark) {
