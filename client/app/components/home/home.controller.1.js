@@ -11,49 +11,15 @@ class HomeController {
 
   init() {
     this.getSentimentData();
+    this.setChartData();
   }
 
-  getInfo(){
-    this.homeService.getInfo().then((response) => {
-      console.log('al info =>', response.data);
-    })
-  }
   getSentimentData(){
     this.homeService.getSentimentData().then((response) =>{
-      this.data = response.data;
-      this.info = this.data.entities;
-      // this.info = this.info.slice(0, 6);
-      this.sinfo = this.parseSentimentData();
-      console.log('this.info', this.info);
-      console.log('this.sinfo', this.sinfo);
-      this.setChartData();
+      this.info = response.data.entities;
+      this.info = this.info.slice(0, 3);
+      console.log(this.info);
     });
-  }
-
-  parseSentimentData(){
-    let colors = ['#fbdf5f', '#4aad62', '#e74565'];
-    let keys = ['joy', 'fear', 'anger'];
-    let array1 = [], array2 = [], array3 = [];
-    let mainArray = [array1, array2, array3];
-    let data = keys.map((key, i) => {
-      this.info.forEach((item, j) => {
-        if(!item.emotions){
-          return;
-        }
-        mainArray[i].push({
-          'series': i,
-          'x': j,
-          'y': item.emotions[keys[i]]
-        });
-      });
-      return {
-        area: true,
-        color: colors[i],
-        key: keys[i],
-        values: mainArray[i]
-      }
-    })
-    return data;
   }
 
   setChartData() {
@@ -77,10 +43,10 @@ class HomeController {
           tooltipHide: function (e) { console.log("tooltipHide"); }
         },
         xAxis: {
-          axisLabel: 'Source #'
+          axisLabel: 'Time (ms)'
         },
         yAxis: {
-          axisLabel: 'Sentiment Level (SL)',
+          axisLabel: 'Voltage (v)',
           tickFormat: function (d) {
             return d3.format('.02f')(d);
           },
@@ -92,10 +58,44 @@ class HomeController {
       }
     };
 
-    // this.data = this.sinAndCos();
-    this.data = this.sinfo;
-    console.log(this.data);
+    this.data = this.sinAndCos();
+
   }
+
+  sinAndCos() {
+    var sin = [], sin2 = [],
+      cos = [];
+
+    //Data is represented as an array of {x,y} pairs.
+    for (var i = 0; i < 100; i++) {
+      sin.push({ x: i, y: Math.sin(i / 10) });
+      sin2.push({ x: i, y: i % 10 == 5 ? null : Math.sin(i / 10) * 0.25 + 0.5 });
+      cos.push({ x: i, y: .5 * Math.cos(i / 10 + 2) + Math.random() / 10 });
+    }
+
+    //Line chart data should be sent as an array of series objects.
+    return [
+      {
+        values: sin,      //values - represents the array of {x,y} data points
+        key: 'Sine Wave', //key  - the name of the series.
+        color: '#ff7f0e',  //color - optional: choose your own line color.
+        strokeWidth: 2,
+        classed: 'dashed'
+      },
+      {
+        values: cos,
+        key: 'Cosine Wave',
+        color: '#2ca02c'
+      },
+      {
+        values: sin2,
+        key: 'Another sine wave',
+        color: '#7777ff',
+        area: true      //area - set to true if you want this line to turn into a filled area chart.
+      }
+    ];
+  }
+
 }
 
 export default HomeController;

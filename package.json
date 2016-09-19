@@ -9,6 +9,7 @@
     "angular-aria": "^1.5.7",
     "angular-material": "^1.1.0-rc.5",
     "angular-material-icons": "^0.7.1",
+    "angular-nvd3": "^1.0.9",
     "angular-ui-router": "^0.2.15",
     "i": "^0.3.5",
     "lodash": "^4.11.2",

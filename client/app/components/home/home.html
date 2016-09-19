@@ -20,7 +20,6 @@
                 </md-card-content>
               </md-card>
             </div>
-            <div layout="column">
               <!-- Graph  -->
               <div flex>
                 <md-card>
@@ -34,39 +33,25 @@
                     </md-card-header-text>
                   </md-card-header>
                   <md-card-content>
-                    <p>
-                      Chart comes here...
-                    </p>
+                    <nvd3 options="vm.options" data="vm.data" class="with-3d-shadow with-transitions"></nvd3>
                   </md-card-content>
                 </md-card>
               </div>
               <!-- Details  -->
-              <div flex>
+              <!--<div flex>
                 <md-card class="senti-details">
                   <md-card-title>
                     <md-card-title-text>
                       <span class="md-headline">Sentiment Transcript</span>
                     </md-card-title-text>
-                    <md-menu md-position-mode="target-right target">
-                      <!-- Trigger element is a md-button with an icon -->
-                      <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
-                        <md-icon class="material-icons">more_vert</md-icon>
-                      </md-button>
-                      <md-menu-content>
-                        <md-menu-item>
-                          <md-button ng-click="vm.doSomething()">Do Something</md-button>
-                        </md-menu-item>
-                      </md-menu-content>
-                    </md-menu>
                   </md-card-title>
                   <md-card-content>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo amet alias facilis earum! Esse hic nobis
                       quis dolore vel, facere cupiditate aliquam quas, voluptate, cum enim quidem voluptatum recusandae molestiae!</p>
                   </md-card-content>
                 </md-card>
-              </div>
+              </div>-->
             </div>
-          </div>
         </md-content>
       </md-tab>
       <md-tab label="Below the hood">
@@ -89,7 +74,8 @@
           <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi
             eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc.
             Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo
-            lectus.</p>
+            lectus.
+          </p>
         </md-content>
       </md-tab>
     </md-tabs>

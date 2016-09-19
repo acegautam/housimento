@@ -4,6 +4,7 @@ import angularAria from 'angular-aria';
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
 import ngMdIcons from 'angular-material-icons';
+import nvd3 from 'angular-nvd3';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
@@ -12,6 +13,8 @@ angular.module('app', [
   uiRouter,
   ngMaterial,
   ngMdIcons,
+  // d3,
+  nvd3,
   Common.name,
   Components.name
 ])
