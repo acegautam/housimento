@@ -1,13 +1,13 @@
 <div class="dashboard">
   <!--<h2>Dashboard</h2>
   <md-divider></md-divider>-->
-  <md-content class="md-padding" layout-xs="column" layout="column">
+  <md-content class="md-padding" layout-xs="column" layout="column" layout-align="center center">
     <md-tabs md-dynamic-height md-border-bottom>
       <md-tab label="Dashboard">
         <md-content class="md-padding">
           <div layout="row" layout-xs="column">
             <div flex="100" flex-gt-xs="50" flex-gt-md="25">
-              <md-card class="senti-box">
+              <md-card class="senti-box" ng-class="vm.activeClass">
                 <md-card-title>
                   <md-card-title-text>
                     <span class="md-headline">
@@ -16,7 +16,7 @@
                   </md-card-title-text>
                 </md-card-title>
                 <md-card-content>
-                  <h1 class="md-display-4">45</h1>
+                  <h1 class="md-display-4">{{vm.score}}</h1>
                 </md-card-content>
               </md-card>
             </div>
@@ -28,8 +28,8 @@
                       <md-icon class="material-icons graph">equalizer</md-icon>
                     </md-card-avatar>
                     <md-card-header-text>
-                      <span class="md-title">Current analysis</span>
-                      <span class="md-subhead">Live streaming of sentiment data</span>
+                      <span class="md-title">Graphical sentiment analysis</span>
+                      <span class="md-subhead">Sentiment data | Aug-Sep 2016</span>
                     </md-card-header-text>
                   </md-card-header>
                   <md-card-content>

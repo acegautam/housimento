@@ -1,8 +1,11 @@
+@import "~angular-material/angular-material.css";
 .dashboard {
   md-content.md-padding{
       padding: 0;
   }
-
+  md-tabs{
+      width: 1280px;
+  }
   .graph{
     background-color: #4caf50;
     .dashed {
@@ -19,16 +22,38 @@
     left: 5px;
   }
   .senti-box{
-    background-color: #2196F3;
+    // background-color: #2196F3;
+    // color: #fff;
+
+    background-color: #fff;
     color: #fff;
 
     h1{
       margin: 0 0 25px 0;
       text-align: center;
+      &.big-font{
+        // .md-display-4;
+      }
     }
   }
   .senti-details{
     background-color: #FF8F00;
     color: #fff;
+  }
+  .bg-white{
+      background-color: #fff;
+      color: #000;
+  }
+  .bg-red{
+      background-color: #e74565;
+      color: #fff;
+  }
+  .bg-amber{
+      background-color: #fbdf5f;
+      color: #000;
+  }
+  .bg-green{
+      background-color: #4aad62;
+      color: #fff;
   }
 }

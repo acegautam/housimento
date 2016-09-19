@@ -6,21 +6,26 @@ class HomeService {
         this.$http = $http;
     }
 
-    getInfo() {
-        // return this.$http.get('sample.json');        
-    }
-
-    getSentimentData() {
+    getPromise(sourceUrl) {
         // return this.$http.get('sentimentData.json');
 
-        let baseUrl = 'http://access.alchemyapi.com/calls/url/URLGetCombinedData';
-        let apikey = 'bd3546fc63db703c583027abffdcf397fd85bd52';
-        let options = 'extract=entities&sentiment=1&emotion=1';
-        let sourceUrl = 'http://www.cnbc.com/2016/05/16/buffetts-berkshire-hathaway-takes-new-stake-in-apple.html';
+        const endpoint = 'URLGetCombinedData';
+        const baseUrl = `http://access.alchemyapi.com/calls/url/${endpoint}`;
+        const apikey = 'bd3546fc63db703c583027abffdcf397fd85bd52';
+        const options = 'extract=doc-emotion,doc-sentiment&sentiment=1&emotion=1';
+        sourceUrl = sourceUrl || 'http://www.cnbc.com/2016/05/16/buffetts-berkshire-hathaway-takes-new-stake-in-apple.html';
 
-        let url = `${baseUrl}?url=${sourceUrl}&apikey=${apikey}&${options}&outputMode=json`;
-
+        const url = `${baseUrl}?url=${sourceUrl}&apikey=${apikey}&${options}&outputMode=json`;
         return this.$http.get(url);
+    }
+
+    getSentimentFromSources(){
+        let cnbcPromise = this.getPromise('http://www.cnbc.com/2016/05/16/buffetts-berkshire-hathaway-takes-new-stake-in-apple.html');
+        let twitterPromise = this.getPromise('https://twitter.com/LATrealestate/status/777043187718160385');
+        let cnnPromise = this.getPromise('http://money.cnn.com/2016/08/31/real_estate/real-estate-inequality/');
+        // let twitterPromise = this.getPromise();
+        
+        return [cnbcPromise, twitterPromise, cnnPromise];
     }
 }
 export default HomeService;
