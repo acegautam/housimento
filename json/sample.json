@@ -1,11 +1,160 @@
-[{
-    "id": 1,
-    "name": "A green door",
-    "price": 12.50,
-    "tags": ["home", "green"]
-}, {
-    "id": 2,
-    "name": "A blue window",
-    "price": 15.00,
-    "tags": ["home", "blue"]
-}]
+[
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "-0.343186",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.97985",
+            "disgust": "0.428543",
+            "fear": "0.055954",
+            "joy": "0.039857",
+            "sadness": "0.042907",
+            "NA": 0
+        },
+        "x": 0
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "-0.288013",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.645924",
+            "disgust": "0.422305",
+            "fear": "0.039766",
+            "joy": "0.030644",
+            "sadness": "0.313501",
+            "NA": 0
+        },
+        "x": 1
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "-0.272064",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.708357",
+            "disgust": "0.810418",
+            "fear": "0.065741",
+            "joy": "0.024383",
+            "sadness": "0.113524",
+            "NA": 0
+        },
+        "x": 2
+    },
+    {
+        "sentimentAnalysis": {
+            "score": "-0.875636",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.79342",
+            "disgust": "0.720849",
+            "fear": "0.047162",
+            "joy": "0.020127",
+            "sadness": "0.239045",
+            "NA": 0
+        },
+        "x": 3
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "0.102531",
+            "type": "positive"
+        },
+        "emotionAnalysis": {
+            "anger": "0.623484",
+            "disgust": "0.264859",
+            "fear": "0.020351",
+            "joy": "0.144017",
+            "sadness": "0.051178",
+            "NA": 0
+        },
+        "x": 4
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "-0.297213",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.550519",
+            "disgust": "0.789673",
+            "fear": "0.065815",
+            "joy": "0.021817",
+            "sadness": "0.17865",
+            "NA": 0
+        },
+        "x": 5
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "0.633645",
+            "type": "positive"
+        },
+        "emotionAnalysis": {
+            "anger": "0.612294",
+            "disgust": "0.073951",
+            "fear": "0.01922",
+            "joy": "0.536239",
+            "sadness": "0.070054",
+            "NA": 0
+        },
+        "x": 6
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "0.496218",
+            "type": "positive"
+        },
+        "emotionAnalysis": {
+            "anger": "0.26359",
+            "disgust": "0.03858",
+            "fear": "0.053383",
+            "joy": "0.768412",
+            "sadness": "0.166315",
+            "NA": 0
+        },
+        "x": 7
+    },
+    {
+        "sentimentAnalysis": {
+            "type": "neutral",
+            "score": 0
+        },
+        "emotionAnalysis": {
+            "anger": "0.396258",
+            "disgust": "0.109255",
+            "fear": "0.162621",
+            "joy": "0.051497",
+            "sadness": "0.585788",
+            "NA": 0
+        },
+        "x": 8
+    },
+    {
+        "sentimentAnalysis": {
+            "mixed": "1",
+            "score": "-0.203429",
+            "type": "negative"
+        },
+        "emotionAnalysis": {
+            "anger": "0.262116",
+            "disgust": "0.136251",
+            "fear": "0.126908",
+            "joy": "0.223867",
+            "sadness": "0.129621",
+            "NA": 0.737884
+        },
+        "x": 9
+    }
+]

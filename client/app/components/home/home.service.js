@@ -6,6 +6,17 @@ class HomeService {
         this.$http = $http;
     }
 
+    getEmoSourceData(){
+        return sourceText;       
+    }
+    getEmoData(){
+        return this.$http.get('sample.json');        
+    }
+
+    getCountryData(){
+        return this.$http.get('countries.json');        
+    }
+
     getPromise(sourceUrl) {
         // return this.$http.get('sentimentData.json');
 

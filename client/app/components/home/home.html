@@ -1,11 +1,19 @@
 <div class="dashboard">
-  <!--<h2>Dashboard</h2>
-  <md-divider></md-divider>-->
-  <md-content class="md-padding" layout-xs="column" layout="column" layout-align="center center">
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="Dashboard">
-        <md-content class="md-padding">
-          <div layout="row" layout-xs="column">
+  <div class="md-padding" layout-xs="column" layout="column" layout-align="center center">
+        <div class="md-padding db-container">
+          <div layout="row" layout-xs="column">            
+            <!-- Details  -->
+            <div flex>
+              <md-card class="senti-details">
+                <md-card-content>
+                  <h2 class="md-headline">What's the chart about?</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo amet alias facilis earum! Esse hic nobis
+                    quis dolore vel, facere cupiditate aliquam quas, voluptate, cum enim quidem voluptatum recusandae molestiae!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nemo, minima blanditiis magnam debitis id iure a, esse, quos error ipsam ad fugiat atque repellendus sequi est. Incidunt quia, ad.</p>
+                </md-card-content>
+              </md-card>
+            </div>
+            <!-- Score -->
             <div flex="100" flex-gt-xs="50" flex-gt-md="25">
               <md-card class="senti-box" ng-class="vm.activeClass">
                 <md-card-title>
@@ -16,68 +24,19 @@
                   </md-card-title-text>
                 </md-card-title>
                 <md-card-content>
-                  <h1 class="md-display-4">{{vm.score}}</h1>
+                  <h1 class="md-display-3 big-font">{{vm.score}}</h1>
                 </md-card-content>
               </md-card>
             </div>
-              <!-- Graph  -->
-              <div flex>
-                <md-card>
-                  <md-card-header>
-                    <md-card-avatar>
-                      <md-icon class="material-icons graph">equalizer</md-icon>
-                    </md-card-avatar>
-                    <md-card-header-text>
-                      <span class="md-title">Graphical sentiment analysis</span>
-                      <span class="md-subhead">Sentiment data | Aug-Sep 2016</span>
-                    </md-card-header-text>
-                  </md-card-header>
-                  <md-card-content>
-                    <nvd3 options="vm.options" data="vm.data" class="with-3d-shadow with-transitions"></nvd3>
-                  </md-card-content>
-                </md-card>
-              </div>
-              <!-- Details  -->
-              <!--<div flex>
-                <md-card class="senti-details">
-                  <md-card-title>
-                    <md-card-title-text>
-                      <span class="md-headline">Sentiment Transcript</span>
-                    </md-card-title-text>
-                  </md-card-title>
-                  <md-card-content>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo amet alias facilis earum! Esse hic nobis
-                      quis dolore vel, facere cupiditate aliquam quas, voluptate, cum enim quidem voluptatum recusandae molestiae!</p>
-                  </md-card-content>
-                </md-card>
-              </div>-->
-            </div>
-        </md-content>
-      </md-tab>
-      <md-tab label="Below the hood">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Below the hood</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac
-            dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin
-            consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-            orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur
-            a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat
-            et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum
-            quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum
-            neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare
-            dui nec orci posuere, nec luctus mauris semper.</p>
-          <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere
-            nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus
-            egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra
-            sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo.
-            Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi
-            eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc.
-            Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo
-            lectus.
-          </p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+          </div>
+          <!-- Graph  -->
+          <div flex>
+            <md-card>
+              <md-card-content>
+                <nvd3 options="vm.options" data="vm.data" class="with-3d-shadow with-transitions"></nvd3>
+              </md-card-content>
+            </md-card>
+          </div>
+        </div>
+  </div>
 </div>
