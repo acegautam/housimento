@@ -1,0 +1,18 @@
+header .img-logo{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    float: left;
+    background: url(./../assets/images/housemeter.png);
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    border: 0;
+    margin: 40px 0px 0 15px;
+}
+header .header-row{
+    background-color: #fafafa;
+}
+header .header-row h2{
+    margin-bottom: 0;
+    color: #4f7ccb
+}

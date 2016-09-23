@@ -1,0 +1,125 @@
+<html lang="en" ng-app="Housimento">
+
+<head>
+  <link rel="stylesheet" href="emoviz/css/watson-bootstrap-dark.css">
+  <link rel="stylesheet" href="emoviz/css/jquery-linedtextarea.css">
+  <link rel="stylesheet" href="emoviz/css/banner.css">
+  <!--<link rel="stylesheet" href="emoviz/css/style.css">-->
+  <link rel="stylesheet" href="emoviz/css/emo-viz.css">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body layout="column" ng-controller="AppCtrl">
+
+  <app flex layout="row">
+    <div flex id="content">
+      <div ui-view>
+        <div class="dashboard">
+          <div class="md-padding" layout-xs="column" layout="column" layout-align="center center">
+            <div class="md-padding db-container">
+              <div layout="row" layout-xs="column">
+                <!-- Details  -->
+                <div flex>
+                  <md-card class="senti-details">
+                    <md-card-content layout="row">
+                      <div flex="30" class="img-logo"></div>
+                      <div class="summary">
+                        <h2 class="md-headline">Welcome to Housimento</h2>
+                        <p>Housimento application uses natural language processing to detect sentiment and emotions from people's digital
+                          footprints like online reviews and social media messages.</p>
+                        <p> The application can offer positive or negative sentiment and emotions of "anger", "disgust", "sadness",
+                          "fear" and "joy".</p>
+                      </div>
+                    </md-card-content>
+                  </md-card>
+                </div>
+                <!-- Score -->
+                <div flex="100" flex-gt-xs="50" flex-gt-md="25">
+                  <md-card class="senti-box" ng-class="activeClass">
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline">
+                <i class="material-icons md-36">face</i>
+                <span class="senti_label">Sentiment Score</span>
+                      </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                      <h1 class="md-display-3 big-font">{{score}}</h1>
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </div>
+              <!-- Graph  -->
+              <div flex>
+                <md-card>
+                  <md-card-content>
+                    <div class="container">
+                      <div id="results_row" class="row">
+                        <div id="emotion_timeline"></div>
+                      </div>
+                      <div id="tooltip" class="well"> </div>
+                    </div>
+                  </md-card-content>
+                </md-card>
+              </div>
+              <!-- Source Text Panel  -->
+              <div flex class="source-text-panel padded" md-whiteframe="2">
+                <md-toolbar class="dark-blue">
+                  <div class="md-toolbar-tools">
+                    <md-card-avatar>
+                      <img class="md-user-avatar" src="assets/images/twitter1.png" width="40" height="40">
+                    </md-card-avatar>
+                    <h2 class="md-flex source-text-title">
+                      Twitter feeds <span class="title-text"></span>
+                    </h2>
+                  </div>
+                </md-toolbar>
+
+                <md-content flex layout-padding class="source-text-box">
+                  <p>Hover of the genomes above to get source info for a specific date</p>
+                </md-content>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app>
+
+  <footer>
+    <div class="houses-image-bg"></div>
+    <div class="footer"></div>
+  </footer>
+
+
+  <!-- Angular Material Dependencies -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="emoviz/js/lib/jquery.bootpag.min.js"></script>
+  <script type="text/javascript" src="emoviz/js/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="emoviz/js/lib/jquery-linedtextarea.js"></script>
+  <script type="text/javascript" src="emoviz/js/lib/d3.v2.js"></script>
+  <script type="text/javascript" src="emoviz/js/lib/d3.layout.cloud.js"></script>
+
+  <script type="text/javascript" src="emoviz/js/config.js"></script>
+  <script type="text/javascript" src="emoviz/js/util.js"></script>
+  <script type="text/javascript" src="emoviz/js/emoViz.js"></script>
+  <script type="text/javascript" src="emoviz/js/emoText.js"></script>
+  <script type="text/javascript" src="emoviz/js/emoGenome.js"></script>
+  <script type="text/javascript" src="emoviz/js/emoTimeline.js"></script>
+  <script type="text/javascript" src="emoviz/js/emoVizApp.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+/***********
+Variables
+************/
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: #ffffff;
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+body {
+  height: auto;
+}
+body .active {
+  background-color: #2196F3;
+  color: #f5f5f5;
+}
+body md-list {
+  padding: 1px 0 1px 0;
+}
+body md-list md-list-item i {
+  position: relative;
+  top: 5px;
+}
+body md-list md-list-item md-item-content > .inset.icon {
+  margin-top: 10px;
+  padding: 0;
+}
+body md-content .md-button {
+  margin: 0;
+}
+body md-toolbar:not(.md-hue-1),
+body .md-fab {
+  fill: #fff;
+}
+app #content {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+.img-logo {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  float: left;
+  background: url('../assets/images/housemeter.png');
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  border: 0;
+  margin: 20px 0px 0 15px;
+}
+header .header-row {
+  background-color: #fafafa;
+  color: #00695C;
+}
+header .header-row h1 {
+  margin-bottom: 0;
+  color: #4f7ccb;
+}
+footer .houses-image-bg {
+  height: 157px;
+  background: url('../assets/images/houses_background.png') bottom center repeat;
+  width: 100%;
+}
+footer .footer {
+  height: 10px;
+  width: 100%;
+  background-color: #009688;
+}
+.dashboard h1{
+  color: #fff;
+}
+.dashboard md-content.md-padding {
+  padding: 0;
+}
+.dashboard .db-container {
+  width: 1280px;
+}
+.dashboard .graph {
+  background-color: #4caf50;
+}
+.dashboard .graph .dashed {
+  stroke-dasharray: 5,5;
+}
+.dashboard g.nvd3 {
+  width: 100%;
+  display: block;
+}
+.dashboard .senti_label {
+  position: relative;
+  top: -10px;
+  left: 5px;
+}
+.dashboard .senti-box {
+  background-color: #fff;
+  color: #fff;
+  height: 224px;
+}
+.dashboard .senti-box h1 {
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+.dashboard .senti-box h1.big-font {
+  font-size: 90px;
+  padding: 7px;
+}
+.dashboard .senti-details {
+  background-color: #FFF176;
+  color: #000;
+}
+.dashboard .bg-white {
+  background-color: #fff;
+  color: #000;
+}
+.dashboard .bg-red {
+  background-color: #e74565;
+  color: #fff;
+}
+.dashboard .bg-amber {
+  background-color: #fbdf5f;
+  color: #000;
+}
+.dashboard .bg-green {
+  background-color: #8BC34A;
+  color: #fff;
+}
+.source-text-panel{
+  display: block;
+  margin: 8px;
+}
+.source-text-title{
+  color: #fff;
+}
+.source-text-box{
+  height: auto;
+  /*max-height: 300px;*/
+}
+md-toolbar.dark-blue{
+  background-color: #4f7ccb;
+}
+md-card-avatar{
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+#tooltip{
+  z-index: 9999999;
+}
+.summary{
+  padding: 0 30px;
+}
